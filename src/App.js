@@ -2,6 +2,7 @@
 import BigCardContainer from "./components/bigCardContainer/bigCardContainer";
 import CardPage from "./components/cardPage/cardPage";
 import CounterContainer from "./components/counterContainer/counterContainer";
+import Footer from "./components/footer/footer";
 import Header from "./components/header/header";
 import Hero from "./components/hero/hero";
 import SecondPage from "./components/secondPage/secondPage";
@@ -21,6 +22,7 @@ function App() {
       <CounterContainer/>
       <CardPage/>
       <BigCardContainer/>
+      <Footer/>
 
       
 
