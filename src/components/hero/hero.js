@@ -1,5 +1,5 @@
-function Hero({heroData}) {
-  const {title, description,...rest} = heroData;
+function Hero({title, description,...rest}) {
+  
     return(
         <div className="hero-region-background">
         <div className="hero_region">

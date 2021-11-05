@@ -1,6 +1,7 @@
 function CardPage({card}) {
-  
   console.log(card)
+  
+  
   
   
  

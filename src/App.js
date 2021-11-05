@@ -59,11 +59,11 @@ function App() {
       <Header/>
       <Sidebar/>
       </SidebarVisibilityContextProvider>
-      <Hero heroData={heroData} />
+      <Hero {...heroData} />
       <SecondPage/>
       <ThirdPage/>
       <CounterContainer/>
-      <CardPage card= {cardData} />
+      <CardPage card={cardData} />
       <BigCardContainer/>
       <Footer/>
 
