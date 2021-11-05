@@ -46,11 +46,12 @@ function App() {
   const heroData = {
     title: "Endless entertainment and knowledge",
     subtitle: "Read or listen anytime, anywhere.",
-    ctaText: "Read free for 90 days",
+    ctaText: "Read free for 90 days ",
     ctaSubText: "Only ₹299/month after. Cancel anytime."
   }
   
   
+
 
   return (
     <div className="App">
@@ -58,11 +59,11 @@ function App() {
       <Header/>
       <Sidebar/>
       </SidebarVisibilityContextProvider>
-      <Hero {...heroData} />
+      <Hero heroData={heroData} />
       <SecondPage/>
       <ThirdPage/>
       <CounterContainer/>
-      <CardPage/>
+      <CardPage card= {cardData} />
       <BigCardContainer/>
       <Footer/>
 
