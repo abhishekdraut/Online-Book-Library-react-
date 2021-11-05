@@ -81,6 +81,12 @@ a {
   text-decoration: none;
   overflow-wrap: break-word;
 }
+.site_header_button{
+  background-color:transparent;
+  padding: 0;
+  border: none;
+  outline: none;
+}
 .sidebar {
   font-family: var(--font-tertiory);
   position: absolute;
@@ -94,7 +100,13 @@ a {
 .x{
   
   text-align: center;
+  
+}
+.x-button{
   color: white;
+  background: transparent;
+  border: none;
+  outline:none;
 }
 .sidebar.active {
   margin-left: 0;
@@ -113,6 +125,7 @@ a {
   right: 30px;
   
 }
+
 .sidebar_menu{
 padding-top:50px;
 }

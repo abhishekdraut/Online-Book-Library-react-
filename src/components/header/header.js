@@ -1,22 +1,31 @@
+import { createContext,useContext } from "react";
+import SidebarVisibiltyContext from "../../store/sidebarVisibilityContext";
+
 function Header() {
+  const{sidebarVisibility,setsidebarVisibility,toggleSidebarVisibility}=useContext(SidebarVisibiltyContext)
 return(
-<div class="site_header">
-        <div class="site_header items">
-          <a href="javascript:void(0)" class="site_header burger site-header">
-            <div class="burger slice one"></div>
-            <div class="burger slice two"></div>
-            <div class="burger slice three"></div>
+
+<div  className="site_header">
+  
+        <div className="site_header items">
+        <button className="site_header_button" onClick={toggleSidebarVisibility}>
+          <a  className="site_header burger site-header">
+
+            <div className="burger slice one"></div>
+            <div className="burger slice two"></div>
+            <div className="burger slice three"></div>
           </a>
-          <div class="site_header-logo">
+         </button>
+          <div className="site_header-logo">
             <a href="#">
               {/* <img
                 src="open-library-logo.png"
                 alt="logo"
-                class="site_header-logo-image"
+                className="site_header-logo-image"
               /> */}
             </a>
           </div>
-          <a href="#" class="site_header btn btn-light"> Sign In </a>
+          <a href="#" className="site_header btn btn-light"> Sign In </a>
         </div>
       </div>
 

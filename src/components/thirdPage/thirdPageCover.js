@@ -5,7 +5,7 @@ function ThirdPageCover() {
               ><img
                 src="https://source.unsplash.com/random/90x120?Novel,Book,Library,Shelf,1"
                 alt=""
-                class="book_image"
+                className="book_image"
             /></a>
           </li>
     )

@@ -5,11 +5,11 @@ import SecondPageHeader from "./secondPageHeader";
 function SecondPage() {
     return(
       <>
-      <div class="second_page">
+      <div className="second_page">
         
         <SecondPageHeader/>
         
-        <div class="second_page-mid-section">
+        <div className="second_page-mid-section">
           <SecondPageBox/>
           <SecondPageBox/>
           <SecondPageBox/>

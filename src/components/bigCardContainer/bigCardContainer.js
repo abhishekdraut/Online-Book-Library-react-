@@ -2,41 +2,41 @@ function BigCardContainer(params) {
     return (
         <>
         <div>
-        <div class="counter_container category_name">Book Details</div>
+        <div className="counter_container category_name">Book Details</div>
       </div>
       
-      <div class="big_card_container">
-        <div class="card big">
-          <div class="card_inner left_side big">
+      <div className="big_card_container">
+        <div className="card big">
+          <div className="card_inner left_side big">
             <img
-              class="card_image big"
+              className="card_image big"
               src="https://imgv2-1-f.scribdassets.com/img/audiobook_square_badge/510417754/396x396/e1986f8af6/1632395555?v=1"
-              alt=""
+              alt="big-card"
             />
           </div>
-          <div class="card_details right_side big">
-            <div class="card_inner right_side big header big">
-              <a href="" class="card_details right_side header big"
+          <div className="card_details right_side big">
+            <div className="card_inner right_side big header big">
+              <a href="#" className="card_details right_side header big"
                 >The Afganisthan paper : A secret history of war.</a
               >
             </div>
 
-            <div class="card_details right_side aurther big">
-              Written By :<a href="">Aurther Name</a>
+            <div className="card_details right_side aurther big">
+              Written By :<a href="#">Aurther Name</a>
             </div>
-            <div class="card_details right_side border big"></div>
-            <div class="card_details right_side details big">
-              <div class="right_side details header">
+            <div className="card_details right_side border big"></div>
+            <div className="card_details right_side details big">
+              <div className="right_side details header">
                 “THE BOOK CHINA DOESN'T WANT YOU TO READ.”—CNN​
               </div>
-              <div class="right_side details summery">
+              <div className="right_side details summery">
                 A riveting insider's story of how the Party and big money work
                 in China today, by a man who, with his wife, Whitney Duan, rose
                 to the zenith of power and wealth—and then fell out of favor.
                 She was disappeared four years ago. News of this book led to a
                 phone call from Whitney, proof that she's alive.
               </div>
-              <div class="right_side details description">
+              <div className="right_side details description">
                 As Desmond Shum was growing up impoverished in China, he vowed
                 his life would be different.
                 <br /><br />
@@ -49,7 +49,7 @@ function BigCardContainer(params) {
                 society. Whitney and Desmond formed an effective team and, aided
                 by relationships they formed with top members of China’s
                 Communist Party, the so-called red aristocracy, he vaulted into
-                China’s billionaire class. Soon they were developing the massive
+                China’s billionaire className. Soon they were developing the massive
                 air cargo facility at Beijing International Airport, and they
                 followed that feat with the creation of one of Beijing’s premier
                 hotels. They were dazzlingly successful, traveling in private
@@ -64,25 +64,25 @@ function BigCardContainer(params) {
                 been able to tell it herself. <br /><br />
               </div>
             </div>
-            <div class="right_side pills">
-              <a class="pill" href=" ">Business</a>
-              <a class="pill" href=" ">Personal memories</a>
-              <a class="pill" href=" ">Asia</a>
-              <a class="pill" href=" ">Business</a>
-              <a class="pill" href=" ">Personal</a>
-              <a class="pill" href=" ">Business</a>
-              <a class="pill" href=" ">Asia</a>
+            <div className="right_side pills">
+              <a className="pill" href=" ">Business</a>
+              <a className="pill" href=" ">Personal memories</a>
+              <a className="pill" href=" ">Asia</a>
+              <a className="pill" href=" ">Business</a>
+              <a className="pill" href=" ">Personal</a>
+              <a className="pill" href=" ">Business</a>
+              <a className="pill" href=" ">Asia</a>
             </div>
-            <div class="right_side metadata">
-              <div class="metadata-left">
-                <div class="publisher">Publisher: <a href="">Business</a></div>
-                <div class="isbn">Isbn: <a href="">Asia</a></div>
+            <div className="right_side metadata">
+              <div className="metadata-left">
+                <div className="publisher">Publisher: <a href="">Business</a></div>
+                <div className="isbn">Isbn: <a href="">Asia</a></div>
               </div>
-              <div class class="metadata-right">
-                <div class="released">
-                  Release:<a href="">Personal memories</a>
+              <div className className="metadata-right">
+                <div className="released">
+                  Release:<a href="#">Personal memories</a>
                 </div>
-                <div class="formate">Formate: <a href="">Asia</a></div>
+                <div className="formate">Formate: <a href="#">Asia</a></div>
               </div>
             </div>
           </div>
