@@ -2,20 +2,21 @@ import{useEffect,useState} from 'react';
 function CardPage({card}) {
   
   
-  const [book, setBook] = useState();
-  const once=null;
+  const [book, setBook] = useState([]);
+  const once=null
   useEffect(() => {
-    fetch("https://iifsd.herokuapp.com/books",{
-      
-    })
+    fetch("https://iifsd.herokuapp.com/books")
       .then((responce) => {
+        
         return responce.json();
+        
       })
       .then((data) => {
         
         setBook(data);
       });
   },[once]);
+
   console.log("first",book)
   
   
