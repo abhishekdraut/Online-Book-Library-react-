@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import SidebarVisibiltyContext from "../../store/sidebarVisibilityContext";
-
+import {Link} from "react-router-dom"
 function Sidebar() {
 const { sidebarVisibility, setsidebarVisibility, toggleSidebarVisibility } =
 useContext(SidebarVisibiltyContext);
@@ -19,9 +19,9 @@ return (
     
 
     <ul className="sidebar_menu">
-      <li>home</li>
-      <li>work</li>
-      <li>About</li>
+     <Link to="/" exact> <li>home</li></Link>
+     <Link to="/books" exact> <li>Books</li></Link>
+     <Link to= "/bookdemo" > <li>Book Demo</li></Link>
       <li>Contact</li>
     </ul>
     </div>

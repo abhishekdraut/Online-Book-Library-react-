@@ -1,30 +1,23 @@
-import{useEffect,useState} from 'react';
-function CardPage({card}) {
-  
-  
+import { useEffect, useState } from "react";
+function CardPage() {
   const [book, setBook] = useState([]);
-  const once=null
+  const once = null;
+  
+  
+
   useEffect(() => {
-    fetch("https://iifsd.herokuapp.com/books")
+    fetch("https://iifsd.herokuapp.com/books  "
+      )
       .then((responce) => {
-        
         return responce.json();
-        
       })
       .then((data) => {
-        
         setBook(data);
       });
-  },[once]);
+  }, [once]);
 
-  console.log("first",book)
-  
-  
-  
- 
-  
+  console.log("first", book);
 
-  
   return (
     <>
       <div>
@@ -34,39 +27,27 @@ function CardPage({card}) {
       </div>
       <div className="card_layout background">
         {book.map((bookItem) => {
-          return(
+          return (
             <div className="card">
-            <div className="card_inner">
-              <img
-                className="card_image"
-                src={bookItem.cover_url}
-                alt=""
-              />
-            </div>
-            <div className="card_details">
-              <div>
-                <a href="" className="card_details header">
-                  {bookItem.book_title}
-                </a>
+              <div className="card_inner">
+                <img className="card_image" src={bookItem.cover_url} alt="" />
               </div>
-              <div className="card_details details">
-                {bookItem.book_short_description}
+              <div className="card_details">
+                <div>
+                  <a href="" className="card_details header">
+                    {bookItem.book_title}
+                  </a>
+                </div>
+                <div className="card_details details">
+                  {bookItem.book_short_description}
+                </div>
+                <div className="card_details aurther">
+                  {bookItem.authors[0].author_name}
+                </div>
               </div>
-              <div className="card_details aurther">{bookItem.authors[0].author_name}</div>
             </div>
-          </div>
-
           );
-          
-          
-          
-         
-          
         })}
-
-        
-        
-        
       </div>
     </>
   );
