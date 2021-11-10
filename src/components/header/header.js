@@ -1,6 +1,6 @@
 import { createContext,useContext } from "react";
 import SidebarVisibiltyContext from "../../store/sidebarVisibilityContext";
-
+import logo from "./img/logo.png"
 function Header() {
   const{sidebarVisibility,setsidebarVisibility,toggleSidebarVisibility}=useContext(SidebarVisibiltyContext)
 return(
@@ -18,11 +18,11 @@ return(
          </button>
           <div className="site_header-logo">
             <a href="#">
-              {/* <img
-                src="open-library-logo.png"
+              <img
+                src={logo}
                 alt="logo"
                 className="site_header-logo-image"
-              /> */}
+              />
             </a>
           </div>
           <a href="#" className="site_header btn btn-light"> Sign In </a>
