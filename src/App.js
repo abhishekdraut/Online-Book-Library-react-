@@ -1,12 +1,6 @@
-import BigCardContainer from "./components/bigCardContainer/bigCardContainer";
-import CardPage from "./components/cardPage/cardPage";
-import CounterContainer from "./components/counterContainer/counterContainer";
 import Footer from "./components/footer/footer";
 import Header from "./components/header/header";
-import Hero from "./components/hero/hero";
-import SecondPage from "./components/secondPage/secondPage";
 import Sidebar from "./components/sidebar/sidebar";
-import ThirdPage from "./components/thirdPage/thirdPage";
 import { SidebarVisibilityContextProvider } from "./store/sidebarVisibilityContext";
 import {
   BrowserRouter as Router,
@@ -35,7 +29,6 @@ function App() {
         </Routes>
         <Footer />
       </Router>
-      
     </div>
   );
 }
