@@ -1,6 +1,22 @@
+import{useEffect,useState} from 'react';
 function CardPage({card}) {
-  console.log(card)
   
+  
+  const [book, setBook] = useState();
+  const once=null;
+  useEffect(() => {
+    fetch("https://iifsd.herokuapp.com/books",{
+      
+    })
+      .then((responce) => {
+        return responce.json();
+      })
+      .then((data) => {
+        
+        setBook(data);
+      });
+  },[once]);
+  console.log("first",book)
   
   
   
@@ -16,26 +32,26 @@ function CardPage({card}) {
         </div>
       </div>
       <div className="card_layout background">
-        {card.map((cardItem) => {
+        {book.map((bookItem) => {
           return(
             <div className="card">
             <div className="card_inner">
               <img
                 className="card_image"
-                src={cardItem.image}
+                src={bookItem.cover_url}
                 alt=""
               />
             </div>
             <div className="card_details">
               <div>
                 <a href="" className="card_details header">
-                  {cardItem.name}
+                  {bookItem.book_title}
                 </a>
               </div>
               <div className="card_details details">
-                {cardItem.description}
+                {bookItem.book_short_description}
               </div>
-              <div className="card_details aurther">{cardItem.authorName}</div>
+              <div className="card_details aurther">{bookItem.authors[0].author_name}</div>
             </div>
           </div>
 
