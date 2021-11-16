@@ -17,11 +17,9 @@ function CaretePage() {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: bookName,
-    })
-    
+    }).then((responceData)=>{return(responceData.json())}).then((data)=>{console.log(data)});
 
-    const data1=responce.json();
-    console.log(data1)
+    
   }
 
   return (
