@@ -1,8 +1,8 @@
 import { createContext,useContext } from "react";
-import SidebarVisibiltyContext from "../../store/sidebarVisibilityContext";
+import SidebarVisibiltyContextState from "../../store/sidebarVisibilityContext";
 import logo from "./img/logo.png"
 function Header() {
-  const{sidebarVisibility,setsidebarVisibility,toggleSidebarVisibility}=useContext(SidebarVisibiltyContext)
+  const{sidebarVisibility,setsidebarVisibility,toggleSidebarVisibility}=useContext(SidebarVisibiltyContextState)
 return(
 
 <div  className="site_header">
