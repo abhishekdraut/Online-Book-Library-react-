@@ -1,6 +1,8 @@
 
 function BigCardContainer() {
   
+  
+  
 
   return (
     <>
@@ -8,7 +10,7 @@ function BigCardContainer() {
         <div className="counter_container category_name">Book Details</div>
       </div>
 
-      <div className="big_card_container">
+      <div className="big_card_container" >
         <div className="card big">
           <div className="card_inner left_side big">
             <img

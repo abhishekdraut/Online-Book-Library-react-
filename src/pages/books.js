@@ -1,6 +1,14 @@
 import CardPage from "../components/cardPage/cardPage";
 
-function Book(params) {
+import { useEffect, useState } from "react";
+
+    
+function Book() {
+    
+    
+    
+    
+
     return(
         <CardPage/>
     )

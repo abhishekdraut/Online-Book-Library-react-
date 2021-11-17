@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-function CardPage() {
+import { Link } from "react-router-dom";
+function CardPage(props) {
   const [book, setBook] = useState([]);
   const once = null;
   
@@ -26,17 +27,19 @@ function CardPage() {
         </div>
       </div>
       <div className="card_layout background">
+        
+        
         {book.map((bookItem) => {
           return (
-            <div className="card">
+            <div className="card" key={bookItem.id} id={bookItem.id}>
               <div className="card_inner">
                 <img className="card_image" src={bookItem.cover_url} alt="" />
               </div>
               <div className="card_details">
                 <div>
-                  <a href="" className="card_details header">
+                 <Link id={bookItem.id} className="card_details header" to={`/books/${bookItem.id}`} >
                     {bookItem.book_title}
-                  </a>
+                  </Link>
                 </div>
                 <div className="card_details details">
                   {bookItem.book_short_description}
@@ -47,7 +50,9 @@ function CardPage() {
               </div>
             </div>
           );
-        })}
+        }
+        )}
+          
       </div>
     </>
   );
