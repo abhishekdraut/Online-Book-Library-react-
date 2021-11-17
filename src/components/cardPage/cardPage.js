@@ -37,7 +37,7 @@ function CardPage(props) {
               </div>
               <div className="card_details">
                 <div>
-                 <Link id={bookItem.id} className="card_details header" to={`/books/${bookItem.id}`} >
+                 <Link id={bookItem.id} className="card_details header" to={`/bookdemo/${bookItem.id}`} >
                     {bookItem.book_title}
                   </Link>
                 </div>
