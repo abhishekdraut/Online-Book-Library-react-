@@ -25,8 +25,8 @@ function App() {
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/books" exact element={<Book />} />
-          <Route path="/books/:id"  exact element={<BookDemo/>} />
-          <Route path="/bookdemo" exact element={<BookDemo />} />
+          
+          <Route path="/bookdemo/:id" exact element={<BookDemo/>} />
           <Route path="/createpage" element={<CaretePage></CaretePage>}></Route>
         </Routes>
         <Footer />
