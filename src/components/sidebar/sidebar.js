@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import SidebarVisibiltyContext from "../../store/sidebarVisibilityContext";
+import SidebarVisibiltyContextState from "../../store/sidebarVisibilityContext";
 import {Link} from "react-router-dom"
 function Sidebar() {
 const { sidebarVisibility, setsidebarVisibility, toggleSidebarVisibility } =
-useContext(SidebarVisibiltyContext);
+useContext(SidebarVisibiltyContextState);
 console.log(sidebarVisibility);
 return (
 <div className={`${ sidebarVisibility ? "overlay sidebar-overlay-show overlay--show" : "overlay sidebar-overlay-show " }
@@ -22,7 +22,7 @@ return (
      <Link to="/" exact> <li>home</li></Link>
      <Link to="/books" exact> <li>Books</li></Link>
      <Link to= "/bookdemo" > <li>Book Demo</li></Link>
-      <li>Contact</li>
+      <Link to="/createpage"><li>Create Book</li></Link>
     </ul>
     </div>
     <div className="sidebar_overlay-rightside" onClick={toggleSidebarVisibility}></div>

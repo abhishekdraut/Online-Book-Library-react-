@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 
-const SidebarVisibiltyContext = createContext();
+const SidebarVisibiltyContextState = createContext();
 
 
 
@@ -15,11 +15,11 @@ export function SidebarVisibilityContextProvider( children) {
   }
 
   return(
-    <SidebarVisibiltyContext.Provider value={{sidebarVisibility,setsidebarVisibility,toggleSidebarVisibility}}{...children}>
+    <SidebarVisibiltyContextState.Provider value={{sidebarVisibility,setsidebarVisibility,toggleSidebarVisibility}}{...children}>
         
-    </SidebarVisibiltyContext.Provider>
+    </SidebarVisibiltyContextState.Provider>
   )
 }
 
 
-export default SidebarVisibiltyContext;
+export default SidebarVisibiltyContextState;

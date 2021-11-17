@@ -642,3 +642,39 @@ width: 350px;
 }
 
 /* ================================================ */
+
+
+.Error_Header{
+  border-radius: 5px;
+  text-align:center;
+  margin: 10px;
+  background-color: rgba(255, 0, 0, 0.233);
+  color: black;
+  font-weight: bold;
+  font-size:25px;
+  font-family: sans-serif;
+}
+.success_Header{border-radius: 5px;
+  text-align:center;
+  margin: 10px;
+  background-color: rgba(15, 105, 23, 0.473);
+  color: black;
+  font-weight: bold;
+  font-size:25px;
+  font-family: sans-serif;
+
+}
+.PageCrate{
+  padding: 10px 50px;
+background-color: rgba(128, 128, 128, 0.575);}
+
+.success_Header1{
+  text-align:center;
+  margin: 10px;
+  background-color: rgba(87, 87, 87, 0.568);
+  color: black;
+  font-weight: bold;
+  font-size:25px;
+  font-family: sans-serif;
+
+}

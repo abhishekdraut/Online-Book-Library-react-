@@ -1,8 +1,15 @@
 import BigCardContainer from "../components/bigCardContainer/bigCardContainer";
 
-function BookDemo(params) {
+function BookDemo(props) {
+    
+    
+    
+    
+    
+    
+    
     return(
-        <BigCardContainer></BigCardContainer>
+        <BigCardContainer />
     )
     
 }
