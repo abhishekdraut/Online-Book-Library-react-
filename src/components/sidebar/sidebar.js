@@ -1,10 +1,28 @@
 import { useContext } from "react";
 import SidebarVisibiltyContextState from "../../store/sidebarVisibilityContext";
 import {Link} from "react-router-dom"
+import UserContext from "../../store/userContext";
+
+
+
 function Sidebar() {
 const { sidebarVisibility, setsidebarVisibility, toggleSidebarVisibility } =
 useContext(SidebarVisibiltyContextState);
-console.log(sidebarVisibility);
+const {user}=useContext(UserContext);
+
+const BookOption=()=>{
+  
+  if (user===null){
+    
+    return(<></>)
+  }
+  else{
+    return(<Link to="/createpage"><li>Create Book</li></Link>)
+  }
+  
+}
+
+
 return (
 <div className={`${ sidebarVisibility ? "overlay sidebar-overlay-show overlay--show" : "overlay sidebar-overlay-show " }
   `} id="sidebar-overlay">
@@ -22,7 +40,8 @@ return (
      <Link to="/" exact> <li>home</li></Link>
      <Link to="/books" exact> <li>Books</li></Link>
      <Link to= "/bookdemo" > <li>Book Demo</li></Link>
-      <Link to="/createpage"><li>Create Book</li></Link>
+     <BookOption/>
+     
     </ul>
     </div>
     <div className="sidebar_overlay-rightside" onClick={toggleSidebarVisibility}></div>

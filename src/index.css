@@ -73,11 +73,12 @@ a {
   height: 40px;
   display: flex;
   align-items: center;
-  border: white solid;
+  border: none;
+  outline: none;
   color: white;
   border-width: 1px;
   border-radius: 4px;
-  padding: 0 32px;
+  padding: 5px 32px;
   text-decoration: none;
   overflow-wrap: break-word;
 }
@@ -86,6 +87,15 @@ a {
   padding: 0;
   border: none;
   outline: none;
+}
+.user{
+  
+  border: white solid;
+  border-width: 2px;
+  margin:0px 10px;
+  border-radius: 7px;
+  text-decoration: none;
+  overflow-wrap: break-word;
 }
 .sidebar {
   display : flex;
@@ -677,4 +687,20 @@ background-color: rgba(128, 128, 128, 0.575);}
   font-size:25px;
   font-family: sans-serif;
 
+}
+.login-container{
+  margin: 20px 10px;
+}
+.errormsg{margin: 20px 0px;
+text-align:center;
+background-color:rgba(255, 0, 0, 0.24);  
+color:red;
+border-radius: 5px;
+max-width: 350px;
+}
+.user_logoutbtn{
+  text-decoration: none;
+  color:rgba(255, 255, 255, 0.418);
+  font-family:sans-serif ;
+  font-weight: normal;
 }
