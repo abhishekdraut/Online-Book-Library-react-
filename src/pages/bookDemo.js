@@ -5,8 +5,8 @@ import { useState, useEffect } from "react";
 function BookDemo(props) {
   const params = useParams();
   const id = params.id;
-
-  const [fullBook, setFullBook] = useState("");
+  const [fullBook, setFullBook] = useState(null);
+  
 
   useEffect(() => {
     fetch(`https://iifsd.herokuapp.com/books/${id}`)
@@ -14,7 +14,7 @@ function BookDemo(props) {
         return responce.json();
       })
       .then((data) => {setFullBook(data)});
-  }, []);
+  },[setFullBook]);
   
 
   return <BigCardContainer {...fullBook} />;

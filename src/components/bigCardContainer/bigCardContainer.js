@@ -1,7 +1,35 @@
+import {Link} from 'react-router-dom';
+
 function BigCardContainer({book_description,book_short_description,book_title,cover_url,authors,tags} ) {
-  console.log(book_description)
   
   
+  const Pills=()=>{
+    if(tags){
+      return (
+        tags.map((item)=>{
+          return(
+            <Link class="pill" to={`pills/${item.id}`}>{item.tag_name}</Link>
+          )
+        })
+      )
+    }
+    else{return(<></>)}
+  }
+  const Auther=()=>{
+    if (authors){
+      return(
+        authors.map((item)=>{
+          return(
+            <Link class="authors_name" to={`authers/${item.id}`}>{item.author_name},</Link>
+          )
+
+        })
+      )
+    }
+    else{
+      return(<></>)
+    }
+  }
 
   return (
     <>
@@ -26,12 +54,12 @@ function BigCardContainer({book_description,book_short_description,book_title,co
             </div>
 
             <div className="card_details right_side aurther big">
-              Written By :{}
+              Written By :<Auther/>
             </div>
             <div className="card_details right_side border big"></div>
             <div className="card_details right_side details big">
               <div className="right_side details header">
-                “THE BOOK CHINA DOESN'T WANT YOU TO READ.”—CNN​
+                
               </div>
               <div className="right_side details summery">
                 {book_short_description}
@@ -42,13 +70,7 @@ function BigCardContainer({book_description,book_short_description,book_title,co
             </div>
             <div className="right_side pills">
               
-              {/* {tags.map(function (pill) {
-                return (
-                  <a className="pill" href=" ">
-                    {pill.tag_name}
-                  </a>
-                );
-              })} */}
+              <Pills/>
             </div>
             <div className="right_side metadata">
               <div className="metadata-left">

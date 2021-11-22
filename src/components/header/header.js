@@ -13,7 +13,7 @@ function Header() {
     
   };
   
-  console.log(user)
+  
   const HeaderSection = () => {
     if (user ===null) {
       return (
@@ -36,7 +36,7 @@ function Header() {
     } else {
       return (
         <>
-        <a href="#" className="user_logoutbtn">Hi {user.username}</a>
+        <a href="#" className="user_logoutbtn">Hi {user.user.username}</a>
         <button className="site_header_button " onClick={logoutState} >
           <a href="#" className="site_header btn btn-light">
             
