@@ -4,7 +4,7 @@ function CardPage(props) {
   const [book, setBook] = useState([]);
   const once = null;
   
-  
+  console.log(book)
 
   useEffect(() => {
     fetch("https://iifsd.herokuapp.com/books  "
@@ -15,7 +15,7 @@ function CardPage(props) {
       .then((data) => {
         setBook(data);
       });
-  }, [once]);
+  }, [setBook]);
 
   console.log("first", book);
 

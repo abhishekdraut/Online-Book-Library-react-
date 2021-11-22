@@ -12,10 +12,15 @@ import Home from "./pages/home";
 import Book from "./pages/books";
 import BookDemo from "./pages/bookDemo";
 import CaretePage from "./pages/create";
+import {UserContextProvider} from "./store/userContext";
+import LogIN from "./pages/logIn";
+
+
 
 function App() {
   return (
     <div className="App">
+      <UserContextProvider>
       <Router>
         <SidebarVisibilityContextProvider>
           <Header />
@@ -28,9 +33,13 @@ function App() {
           
           <Route path="/bookdemo/:id" exact element={<BookDemo/>} />
           <Route path="/createpage" element={<CaretePage></CaretePage>}></Route>
+          <Route path="/login"  element={<LogIN/>} />
+          {/* <Route path="/login"  element={<SignUP />} />  */}
+          
         </Routes>
         <Footer />
       </Router>
+      </UserContextProvider>
     </div>
   );
 }
