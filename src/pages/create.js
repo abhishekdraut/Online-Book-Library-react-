@@ -106,7 +106,7 @@ function CaretePage() {
         <form className ="create_book_form" onSubmit={uploadValue}>
           <Msg />
           <input className="form_input"type="text"placeholder="Enter the name of book" onChange={(e) => {setError(null); setbookname(e.target.value); }}></input>
-          <input className="form_input" type="text" placeholder="Enter the favsubject" onChange={(e) => { setError(null);setshortDescription(e.target.value); }}></input>
+          <input className="form_input" type="text" placeholder="Enter the short-description" onChange={(e) => { setError(null);setshortDescription(e.target.value); }}></input>
           <textarea className="form_input" onChange={(e)=>{setError(null);setdescription(e.target.value)}} placeholder="Enter your description here"></textarea>
           <label htmlFor="book-cover-url">Book cover URL:</label>
           <input className="form_input" type="text" id="book-cover-url" placeholder="URL of the cover" value={coverURL} onChange={(e) => {setCoverURL(e.target.value) }} />

@@ -14,6 +14,7 @@ import BookDemo from "./pages/bookDemo";
 import CaretePage from "./pages/create";
 import {UserContextProvider} from "./store/userContext";
 import LogIN from "./pages/logIn";
+import SignUP from "./pages/signUp";
 
 
 
@@ -34,7 +35,7 @@ function App() {
           <Route path="/bookdemo/:id" exact element={<BookDemo/>} />
           <Route path="/createpage" element={<CaretePage></CaretePage>}></Route>
           <Route path="/login"  element={<LogIN/>} />
-          {/* <Route path="/login"  element={<SignUP />} />  */}
+          <Route path="/signup"  element={<SignUP/>} /> 
           
         </Routes>
         <Footer />
