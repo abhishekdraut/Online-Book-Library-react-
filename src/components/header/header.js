@@ -26,10 +26,10 @@ function Header() {
             </Link>
           </button>
           <button className="site_header_button user">
-            <a href="#" className="site_header btn btn-light">
+            <Link to="/signup" className="site_header btn btn-light">
               
               Sign up
-            </a>
+           </Link>
           </button>
         </>
       );

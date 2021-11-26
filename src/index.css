@@ -735,7 +735,7 @@ max-width: 350px;
 }
 .input_btn{
   max-width:100px
-}.login_submit{
+}.login_submit,.signup_submit{
   background-color: rgb(0,41,63);
 }
 @media (max-width: 768px){
