@@ -2,6 +2,7 @@ import { useState,useContext } from "react";
 import AuthorsMultiSelect from "../components/authorSelection/autherMultiSelect";
 import TagsMultiSelect from "../components/tagSelection/tagMultiSelect";
 import UserContext from "../store/userContext";
+import {useNavigate} from 'react-router-dom';
 
 
 function CaretePage() {
@@ -14,6 +15,7 @@ function CaretePage() {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const{user}=useContext(UserContext);
+  const navigate=useNavigate()
 
 
 
@@ -49,22 +51,27 @@ function CaretePage() {
       setSuccess("");
       return;
     } else {
+      console.log(user.jwt)
       setSuccess("processing....");
       fetch("https://iifsd.herokuapp.com/books", {
         method: "POST",
-        'Content-Type': 'application/json',
-          'Authorization': `Bearer ${user.jwt}`,
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${user.jwt}`
+        },
         body: JSON.stringify(
-          {
-            "book_title": bookname,
-            "book_short_description": shortDescription,
-            "book_description": description,
-            "cover_url": coverURL,
-            "authors": selectedAuthorsArray,
-            "tags": selectedTagsArray
+          
+              {
+                "book_title": bookname,
+                "book_short_description": shortDescription,
+                "book_description": description,
+                "cover_url": coverURL,
+                "authors": selectedAuthorsArray,
+                "tags": selectedTagsArray
+    
+              }
+              ),
 
-          }
-        ),
       })
         .then((responceData) => {
           return responceData.json();
@@ -72,16 +79,18 @@ function CaretePage() {
         .then((data) => {
           if(data.error){
             setSuccess("")
+            console.log(data)
             setError(data.error)
           }
           else{
             setSuccess("Data Successfully submitted");
-          setError("");
+            setError("");
+            navigate("/books")
 
           }
           
 
-          console.log(data);
+          
         })
         .catch(() => {
           setError("server error occourd");

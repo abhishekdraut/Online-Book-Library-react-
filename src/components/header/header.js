@@ -19,14 +19,14 @@ function Header() {
       return (
         <>
           <button className="site_header_button user">
-           <Link to="/login" className="site_header btn btn-light" exact> 
+           <Link to="/login" className="site_header_btn btn-light" exact> 
               
               Log in
             
             </Link>
           </button>
           <button className="site_header_button user">
-            <Link to="/signup" className="site_header btn btn-light">
+            <Link to="/signup" className="site_header_btn btn-light">
               
               Sign up
            </Link>
@@ -37,8 +37,8 @@ function Header() {
       return (
         <>
         <a href="#" className="user_logoutbtn">Hi {user.user.username}</a>
-        <button className="site_header_button " onClick={logoutState} >
-          <a href="#" className="site_header btn btn-light">
+        <button className="site_header_button user" onClick={logoutState} >
+          <a href="#" className="logout_btn">
             
             Logout
           </a>

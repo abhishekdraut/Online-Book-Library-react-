@@ -11,7 +11,7 @@ function LogIN(props) {
    
   useEffect(() => {
     if (user != null) {
-      navigate("/");
+      navigate("/books");
     }
   }, [user]);
   

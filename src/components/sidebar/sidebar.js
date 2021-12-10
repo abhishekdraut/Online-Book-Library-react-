@@ -39,7 +39,7 @@ return (
     <ul className="sidebar_menu">
      <Link to="/" exact> <li>home</li></Link>
      <Link to="/books" exact> <li>Books</li></Link>
-     <Link to= "/bookdemo" > <li>Book Demo</li></Link>
+     {/* <Link to= "/bookdemo" > <li>Book Demo</li></Link> */}
      <BookOption/>
      
     </ul>
