@@ -1,3 +1,4 @@
+import {useEffect} from 'react'
 function Hero({title, description,...rest}) {
   
     return(

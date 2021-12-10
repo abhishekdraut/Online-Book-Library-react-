@@ -16,7 +16,7 @@ function BookDemo(props) {
       .then((data) => {setFullBook(data)});
   },[setFullBook]);
   
-
+  
   return <BigCardContainer {...fullBook} />;
 }
 export default BookDemo;
