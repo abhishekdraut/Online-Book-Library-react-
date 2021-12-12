@@ -56,11 +56,11 @@ function BigCardContainer({
         },
       })
         .then((responce) => {
-          console.log(responce.ok);
+          
           return responce.json();
         })
         .then((data) => {
-          console.log(data);
+          
 
           if (user != null) {
             navigate("/books");
